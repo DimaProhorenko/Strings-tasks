@@ -13,6 +13,8 @@ public class Main {
     }
 
 //  Doesn't modify passed array
+//  Использовал stream api, чтобы пройтись по каждому элементу массива, и изменить 'b' на 'o',
+//  после чего stream конвертируется в массиив строк и возвращается
     public static String[] changeBToO(String[] vals) {
         return Arrays.stream(vals).map(el -> el.replace('b', 'o')).toArray(String[]::new);
     }
